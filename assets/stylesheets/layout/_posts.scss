@@ -1,0 +1,34 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.entry-header {}
+
+.entry-title {}
+.entry-meta {display:flex;flex-direction:column;font-size:80%;text-transform: uppercase;}
+.posted-on {font-style:italic;}
+.entry-date {}
+.author {background:rgba(100, 100, 140, 0.5);padding:1px 3px;
+  a {color:white;text-decoration:none;}
+
+}

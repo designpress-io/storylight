@@ -1,0 +1,84 @@
+
+.widget {
+	margin: 0 0 1.5em;
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}
+
+/*--------------------------------------------------------------
+  	Footer Area -- Based on Flexbox
+--------------------------------------------------------------*/
+
+.footer-area {
+	//background-color: $color__background-footer;
+}
+
+.footer-area,
+.site-footer {
+	display:flex;
+	flex-direction: column;
+}
+
+.site-footer {
+	background: -webkit-linear-gradient(#7e576f 0%, #a68f8f 100%);
+	
+		a {color:white;}
+}
+
+/*============= MOBILE FIRST ========*/
+
+.footer-area {
+    //text-align: center;
+        
+    ul {margin: 0;padding: 0;}    
+   
+    //h2.widget-title {@include widget-title;}
+}
+
+.footer-1 {padding-top: 5%;}
+
+.footer-1, .footer-2, .footer-3, .footer-4 {padding:2% 5%;}
+
+//.footer-wrap .widget {margin:0;}
+
+@include susy-breakpoint(max-width 48em) {
+
+    .footer-2, .footer-3, .footer-4 {
+      &:before {display: block; padding-bottom: 1em; content: '$$$$$$$$$';}
+    }
+}
+
+.site-footer {
+    clear: both;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    //background: $color__background-infos;
+    padding: 1em;
+    
+    p {margin:0;}
+}
+
+.site-info {font-size: .7em;font-weight: 100;color:white;letter-spacing: 1px; text-align: center;text-transform: uppercase;}
+
+/*============= TABLETS & DESKTOP ========*/
+
+@include susy-breakpoint(48em) {
+	    
+    .footer-1, .footer-2, .footer-3, .footer-4 {flex:1;padding:2% 3%;}
+    
+}
+
+@include susy-breakpoint(min-width 50em) {
+	
+	.footer-area {
+		flex-direction: row;
+		max-width:$container-width;
+	    margin:0 auto;
+	    
+	    	ul {margin: 0;padding: 0;}
+	}
+}

@@ -1,0 +1,126 @@
+/*--------------------------------------------------------------
+  	Main Navigation - Mobile First - Based on Flexbox
+--------------------------------------------------------------*/
+
+.main-navigation {
+    position: relative;
+    display: block;
+    clear: both;
+    
+    ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      display: none;
+    
+        ul {
+        margin: 0;
+        padding-left: 0;
+        display: block;
+            
+            a {width: 100%;}
+            
+        }
+    }  
+          
+    li {flex:1;margin-top: 5px;}
+    
+    a {
+    display: block;
+    max-height: 30px; /* à modifier selon vos besoins */
+	text-overflow: ellipsis;
+	overflow: hidden;
+	word-break: break-all; 
+    padding: 5px;
+    font: normal 500 small-caps 18px/1 'Cochin';
+    //letter-spacing: .1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #6d6d6d /* puis ajouter une variable : $color__link-menu*/;
+    background: none; /* puis ajouter une variable : $color__background-navigation-items*/;
+           
+    &:hover {
+    background: #32abab; //color: $color__link-hover-menu;}
+    color: white;
+        
+    &:visited {background: hsla(351, 75%, 67%, 1) /* ajouter une variable : $color__link-visited-menu */;}    
+    
+    }               
+
+}
+}
+
+.main-navigation ul li:hover > ul {display:block;}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+    display: block;
+}
+
+.menu-toggle {width: 120px;margin: 0 auto;background: #6d628d;color: white;padding: .5em;border: none;cursor: pointer;}
+
+/*============= TABLETS & DESKTOP ========*/
+
+@media screen and (min-width: 37.5em) and (max-width: 50em) {
+
+    //#main-menu {width: 100%;}   
+}
+
+@media screen and (min-width: 50em) {
+    
+.menu-toggle {display: none;}
+    
+.main-navigation {
+	
+	flex:1;
+	
+    ul {
+        display: flex;
+        z-index: 1000;
+        margin: 0 auto;
+        
+        li {      
+            flex:1;margin-top: 0;
+            &:last-child {border-right: 1px solid rgba(100, 100, 140, 0.5);
+	         
+            }
+
+        }
+        
+        ul {
+            display: none;
+            position:absolute;
+            width:180px;
+            
+            li {display: flex;
+	        //&:last-child {border-top: 1px solid #6d6d6d;}
+	        &:first-child {border-right:1px solid rgba(100, 100, 140, 0.5);}        
+            }
+            
+            a {flex:1;padding: 6px 10px;font-variant: normal;font-size: 98%;text-align: left;border-top: none;background: rgba(255,255,255,0.7);}
+        }
+    }
+    
+    a {
+	
+		&:before {@include icon_menu;}
+		 	    
+    display: block;
+    text-decoration: none;
+    transition: background ease .5s;
+    text-align: left;
+    border: 1px solid rgba(100, 100, 140, 0.5);
+    border-right: none;
+    
+  
+        
+    &:focus,
+    &:hover {}
+    }
+}
+    
+.main-navigation ul li:hover > ul,
+.main-navigation ul ul li:hover > ul {display:block;}
+
+}
