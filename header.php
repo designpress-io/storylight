@@ -24,7 +24,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'Storylight' ); ?></a>
 	
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header wrap" role="banner">
 		
 		<?php get_template_part( 'components/header/site', 'branding' ); ?>
 
@@ -35,4 +35,4 @@
 		<?php Storylight_social_menu(); ?>
 
 	</header>
-	<div id="content" class="site-content">
+	<div id="content" class="site-content wrap">

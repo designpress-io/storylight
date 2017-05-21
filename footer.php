@@ -13,7 +13,7 @@
 
 	</div>
 	
-	<section class="footer-area"><!-- possibilité d'utiliser la variable $container-width pour définir une taille/container --> 
+	<section class="footer-area wrap"><!-- possibilité d'utiliser la variable $container-width pour définir une taille/container --> 
     	<?php get_template_part( 'components/footer/site', 'footer_area' ); ?>     
     </section><!-- footer-widgets-area -->
 
