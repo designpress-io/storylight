@@ -24,11 +24,14 @@
 
 .entry-header {}
 
-.entry-title {}
-.entry-meta {display:flex;flex-direction:column;font-size:80%;text-transform: uppercase;}
-.posted-on {font-style:italic;}
+.entry-title {margin-bottom:0;color:crimson;}
+.entry-meta {display:flex;flex-direction:column;font-size:80%;text-transform: uppercase;font-style:italic;}
+.posted-on {}
+.byline {text-transform: lowercase; margin-left:10px; padding-bottom: 3px;border-bottom: 1px solid crimson;
+	&:before {content: "@";}
+}
 .entry-date {}
-.author {background:rgba(100, 100, 140, 0.5);padding:1px 3px;
-  a {color:white;text-decoration:none;}
+.author {
+	 a {color:crimson;text-decoration:none;text-transform: uppercase;}
 
 }

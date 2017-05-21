@@ -32,18 +32,18 @@
 	overflow: hidden;
 	word-break: break-all; 
     padding: 5px;
-    font: normal 500 small-caps 18px/1 'Cochin';
-    //letter-spacing: .1rem;
+    font: normal 700 small-caps 18px/1 'Libre Franklin';
+    //letter-spacing: 1px;
     text-align: center;
     text-decoration: none;
     color: #6d6d6d /* puis ajouter une variable : $color__link-menu*/;
     background: none; /* puis ajouter une variable : $color__background-navigation-items*/;
            
     &:hover {
-    background: #32abab; //color: $color__link-hover-menu;}
+    background: crimson; //color: $color__link-hover-menu;}
     color: white;
         
-    &:visited {background: hsla(351, 75%, 67%, 1) /* ajouter une variable : $color__link-visited-menu */;}    
+    &:visited {/* ajouter une variable : $color__link-visited-menu */;}    
     
     }               
 
