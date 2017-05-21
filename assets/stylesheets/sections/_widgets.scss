@@ -8,12 +8,22 @@
 	}
 }
 
+h2.widget-title {
+    font-style: italic;
+	text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 20px;
+   }
+
+
 /*--------------------------------------------------------------
   	Footer Area -- Based on Flexbox
 --------------------------------------------------------------*/
 
 .footer-area {
 	//background-color: $color__background-footer;
+	border: 1px solid crimson;
+	margin: 10px auto 0;
 }
 
 .footer-area,
@@ -23,7 +33,7 @@
 }
 
 .site-footer {
-	background: -webkit-linear-gradient(#7e576f 0%, #a68f8f 100%);
+	background: -webkit-linear-gradient(#a01a35 10%, crimson 100%); margin-top: 10px;
 	
 		a {color:white;}
 }
@@ -76,8 +86,6 @@
 	
 	.footer-area {
 		flex-direction: row;
-		max-width:$container-width;
-	    margin:0 auto;
 	    
 	    	ul {margin: 0;padding: 0;}
 	}
